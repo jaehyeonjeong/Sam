@@ -11,8 +11,10 @@ int main(void)
 	sum = 0;
 	i = 1;
 	while(i <= n) { /*i가 n이하이면 반복합니다.*/
+		printf("i : %d\n", i);
 		sum += i;	/*sum에 i를 더합니다.*/
 		i++;		/*i 값을 1증가 시킵니다.*/
+		printf("i++ : %d\n", i);
 	}
 	printf("1부터 %d까지의 합은 %d입니다.\n", n, sum);
 
