@@ -2,7 +2,8 @@
 
 int main(void)
 {
-	int n, count;
+	unsigned int n;		/*0~4,147,483,647*/ 
+	int count;			/*-2,147,483,648 ~ 2,147,483,647*/
 	printf("숫자를 입력하세요 : "); scanf("%d", &n);
 	do{
 		n = n / 10;
