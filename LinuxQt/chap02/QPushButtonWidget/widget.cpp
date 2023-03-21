@@ -12,9 +12,15 @@ Widget::Widget(QWidget* parent) : QWidget(parent)
 
 	QLabel *label = new QLabel("<font color=blue>Hello Qt!</font>", this);
 	label->setGeometry(10, 50, 75, 35);
-	connect(quit, SIGNAL(clicked()), qApp, SLOT(quit()));
+	connect(quit, &QPushButton::clicked, [this](){qApp->quit();});
 }
 
 Widget::~Widget()
 {
+}
+
+void Widget::slotQuit()
+{
+	qDebug("slotQuit");
+	QMetaObject::invokeMethod(qApp, "quit");
 }

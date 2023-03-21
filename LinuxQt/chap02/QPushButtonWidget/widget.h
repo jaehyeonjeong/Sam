@@ -10,6 +10,9 @@ class Widget : public QWidget
 public:
 	Widget(QWidget* parent = 0);
 	~Widget();
+
+public slots:
+	void slotQuit();
 };
 
 #endif // WIDGET_H
