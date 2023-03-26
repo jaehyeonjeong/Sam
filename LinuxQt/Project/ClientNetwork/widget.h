@@ -35,7 +35,7 @@ private:
 	QTableView* patientTable;
 	QListWidget* pictureList;
 
-	QString hostName = "10.0.2.15";
+	QString hostName = "192.168.123.109";
 	QString portNum = "40000";
 
 	QNetworkAccessManager* manager;
