@@ -3,6 +3,11 @@
 
 #include <QMainWindow>
 
+class QAction;
+class QTextEdit;
+class QLabel;
+class QMdiArea;
+
 class QtEditor : public QMainWindow
 {
 	Q_OBJECT
@@ -10,6 +15,13 @@ class QtEditor : public QMainWindow
 public:
 	QtEditor(QWidget* parent = 0);
 	~QtEditor();
+
+private:
+	QLabel* statusLabel;
+	QMdiArea* mdiArea;
+
+	QAction* makeAction(QString icon, QString name, QString shortCut,
+			QString toolTip, QObject* recv, const char* slot);
 
 public slots:
 	void newFile();
